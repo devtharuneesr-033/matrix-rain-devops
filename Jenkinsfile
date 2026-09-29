@@ -42,7 +42,7 @@ pipeline {
         stage('Docker Build & Package') {
             steps {
                 echo '=== Stage 3: Building Container Image ==='
-                bat "docker build -t ${IMAGE_NAME}:${IMAGE_TAG} -t ${IMAGE_NAME}:latest ."
+                bat "\"C:\\Users\\devth\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe\" build -t ${IMAGE_NAME}:${IMAGE_TAG} -t ${IMAGE_NAME}:latest ."
             }
         }
 
