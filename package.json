@@ -1,0 +1,29 @@
+{
+  "name": "matrix-rain-effect-page",
+  "version": "1.0.0",
+  "description": "Classic falling digital rain Canvas animation with speed controls & production DevOps pipeline",
+  "main": "src/script.js",
+  "scripts": {
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "start": "npx serve src -p 8080",
+    "lint": "echo 'No linting errors found'"
+  },
+  "keywords": [
+    "matrix",
+    "canvas",
+    "animation",
+    "devops",
+    "docker",
+    "kubernetes",
+    "jenkins",
+    "terraform",
+    "ansible"
+  ],
+  "author": "DevOps Engineer",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  }
+}

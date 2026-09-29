@@ -1,0 +1,31 @@
+# Dependency directories
+node_modules/
+
+# Build and test output
+dist/
+build/
+coverage/
+*.log
+
+# Terraform state files
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+terraform.tfvars
+
+# Ansible retry files & logs
+*.retry
+*.log
+ansible/.vault_password
+
+# IDE & OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Environment files
+.env
+.env.local

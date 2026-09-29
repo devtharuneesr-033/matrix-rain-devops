@@ -1,0 +1,25 @@
+---
+# Role Tasks: Docker & K8s Node Bootstrap
+- name: Verify Docker installation
+  command: docker --version
+  register: docker_version_check
+  changed_when: false
+
+- name: Log Docker Version
+  debug:
+    msg: "Installed Docker runtime: {{ docker_version_check.stdout }}"
+
+- name: Ensure UFW allows NodePort range
+  ufw:
+    rule: allow
+    port: '30000:32767'
+    proto: tcp
+
+- name: Ensure UFW allows HTTP/HTTPS
+  ufw:
+    rule: allow
+    port: "{{ item }}"
+    proto: tcp
+  loop:
+    - '80'
+    - '443'

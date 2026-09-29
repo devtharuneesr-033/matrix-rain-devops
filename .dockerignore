@@ -1,0 +1,13 @@
+.git
+.gitignore
+node_modules
+npm-debug.log
+coverage
+.env
+terraform
+ansible
+k8s
+Jenkinsfile
+BRANCHING.md
+README.md
+*.md

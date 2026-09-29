@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Classic Matrix Rain Canvas animation with speed, density, font size, character set, and color controls.">
+    <title>Matrix Rain Effect | DevOps Production Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background Canvas for Rain Animation -->
+    <canvas id="matrixCanvas"></canvas>
+
+    <!-- Header Overlay -->
+    <header class="app-header">
+        <div class="logo">
+            <span class="glyph">⚡</span> SYSTEM://MATRIX_RAIN_V2.4
+        </div>
+        <div class="status-badge">
+            <span class="status-dot"></span> POD_STATUS: ONLINE
+        </div>
+    </header>
+
+    <!-- Floating Interactive Control Panel -->
+    <main class="control-panel-wrapper">
+        <div class="control-panel" id="controlPanel">
+            <div class="panel-header">
+                <h2>CONSOLE CONTROLS</h2>
+                <button id="togglePanelBtn" class="icon-btn" title="Toggle Control Panel">─</button>
+            </div>
+            
+            <div class="panel-body">
+                <!-- Speed Control -->
+                <div class="control-group">
+                    <div class="control-label">
+                        <label for="speedSlider">Rain Speed (FPS)</label>
+                        <span id="speedVal" class="val-display">30 FPS</span>
+                    </div>
+                    <input type="range" id="speedSlider" min="5" max="60" value="30" step="1">
+                </div>
+
+                <!-- Rain Density -->
+                <div class="control-group">
+                    <div class="control-label">
+                        <label for="densitySlider">Rain Density</label>
+                        <span id="densityVal" class="val-display">85%</span>
+                    </div>
+                    <input type="range" id="densitySlider" min="20" max="100" value="85" step="5">
+                </div>
+
+                <!-- Font Size -->
+                <div class="control-group">
+                    <div class="control-label">
+                        <label for="fontSizeSlider">Font Size (px)</label>
+                        <span id="fontSizeVal" class="val-display">16px</span>
+                    </div>
+                    <input type="range" id="fontSizeSlider" min="10" max="32" value="16" step="2">
+                </div>
+
+                <!-- Character Set Selector -->
+                <div class="control-group">
+                    <label for="charsetSelect">Character Set</label>
+                    <select id="charsetSelect" class="custom-select">
+                        <option value="katakana" selected>Matrix Katakana (Half-width)</option>
+                        <option value="binary">Binary Stream (0 & 1)</option>
+                        <option value="ascii">ASCII Cyber Code</option>
+                        <option value="hex">Hexadecimal Dump</option>
+                        <option value="runic">Ancient Runic Glyphs</option>
+                    </select>
+                </div>
+
+                <!-- Color Theme Selector -->
+                <div class="control-group">
+                    <label for="themeSelect">Color Matrix Theme</label>
+                    <select id="themeSelect" class="custom-select">
+                        <option value="matrix" selected>Classic Matrix Green</option>
+                        <option value="cyberpunk">Cyberpunk Neon (Cyan/Purple)</option>
+                        <option value="redcode">Red Alert Code</option>
+                        <option value="gold">Zion Gold</option>
+                        <option value="amber">Retro Amber Terminal</option>
+                    </select>
+                </div>
+
+                <!-- Action Controls -->
+                <div class="button-row">
+                    <button id="pauseBtn" class="btn btn-primary">
+                        <span id="pauseIcon">⏸</span> <span id="pauseText">Pause</span>
+                    </button>
+                    <button id="resetBtn" class="btn btn-secondary">
+                        🔄 Reset
+                    </button>
+                    <button id="fullscreenBtn" class="btn btn-secondary">
+                        ⛶ Fullscreen
+                    </button>
+                </div>
+            </div>
+
+            <!-- Stats Footer -->
+            <div class="panel-footer">
+                <div class="metric">
+                    <span class="metric-label">Active Columns:</span>
+                    <span id="columnsVal" class="metric-value">0</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">Render Engine:</span>
+                    <span class="metric-value">Canvas 2D</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Copyright/Metadata -->
+    <footer class="app-footer">
+        <span>DevOps Kubernetes Deployment Pipeline Demo</span> • 
+        <span>Build: <code id="buildTag">v1.0.0-release</code></span>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
